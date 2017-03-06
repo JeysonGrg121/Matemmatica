@@ -19,6 +19,11 @@ public class Menu {
   double altura;
   double radio;
   double diametro;
+  double x1;
+  double x2;
+  double x3;
+  double y1,y2,y3;
+
     
     
     public void me(){
@@ -33,7 +38,8 @@ public class Menu {
             System.out.println("1. Cuadrado");
             System.out.println("2. Rectangulo");
             System.out.println("3. Circulo");
-            System.out.println("4. Salir");
+            System.out.println("4. Triangulo");
+            System.out.println("5. Salir");
             des=entrada.nextInt();
             switch(des){
                 case 1:
@@ -44,12 +50,23 @@ public class Menu {
                     break;
                 case 3: 
                     menu_circulo();
+                    break;
+                case 4:
+                    menu_triangulo();
+                    break;
+                case 5:
+                    des = 0;
+                    break;
+                default:
+                    System.out.println("No esta dentro de las opciones...");
+                 
+                 
             }
         }
     }
 
 
-    public void menu_cuadrado(){
+public void menu_cuadrado(){
         int des1=-1;
             System.out.println("Ingrese uno valor del lado:");
             lado = entrada.nextDouble();
@@ -159,7 +176,58 @@ public void menu_circulo(){
 }
 }
 }
+public void menu_triangulo(){
+
+    
+     int des1=-1;
+            System.out.println("ingrese el valor de x1: ");
+            x1= entrada.nextDouble();
+            System.out.println("ingrese el valor de y1: ");
+            y1= entrada.nextDouble();
+            System.out.println("ingrese el valor de x2: ");
+            x2= entrada.nextDouble();
+            System.out.println("ingrese el valor de y2: ");
+            y2= entrada.nextDouble();
+            System.out.println("ingrese el valor de x3: ");
+            x3= entrada.nextDouble();
+            System.out.println("ingrese el valor de y3: ");
+            y3= entrada.nextDouble();
+        while(des1!=0){
+            
+            System.out.println("1. Area");
+            System.out.println("2. Perimetro");
+            System.out.println("3. salir");
+            des1=entrada.nextInt();
+        switch(des1){
+            case 1:
+        
+                Triangulo triangulo1 = new Triangulo(x1,x2,x3,y1,y2,y3);
+                triangulo1.area();
+                System.out.println("El area del Triangualo es: "+
+                triangulo1.getareaTriangulo());
+                break;
+            case 2:
+                Triangulo triangulo2 = new Triangulo(x1,x2,x3,y1,y2,y3);
+                triangulo2.perimetrotriangulo();
+                System.out.println("El perimetro del Triangulo es:"+
+                triangulo2.getPerimetroTriangulo());
+                System.out.println("El lado A Del triangulo es:"+
+                triangulo2.getladoa());
+                System.out.println("El lado B Del triangulo es:"+
+                triangulo2.getladob());
+                System.out.println("El lado C Del triangulo es:"+
+                triangulo2.getladoc());
+                break;
+            case 3: 
+                des1 = 0;
+                break;
+            default:
+                System.out.println("No esta dentro de las opciones...");
+        }
 }
+}
+}
+
     
 
 
