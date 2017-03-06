@@ -10,27 +10,26 @@ package matematca;
  * @author Carlos
  */
 public class Cuadrado {
-    private double lado;
-    private double areaCuadrado;
-
-    public Cuadrado(double lado){
-        this.lado = lado;
-    }
+    public double lado;
+    public double areaCuadrado;
+    public double perimetroCuadrado;
     
-    public double getLado(){
-        return lado;
-    }
-
-    public void setLado(double lado){
+     public Cuadrado(double lado){
         this.lado = lado;
     }
-
-    public double getareaCuadrado(){
+     public void area(){
+         areaCuadrado = lado*lado;
+         
+     }
+      public double getareaCuadrado(){
         return areaCuadrado;
-    }    
-  
-    public void area(){
-        areaCuadrado = lado * lado;
-    }    
+        }    
+    public double getperimetroCuadrado(){
+        return perimetroCuadrado; 
+        
+    }
+    public void  perimetro(){
+        perimetroCuadrado = 4*lado;
+     }
     
 }

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package matematca;
-
+import java.util.*;
 /**
  *
  * @author Carlos
@@ -16,26 +16,22 @@ public class Matematca {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //probar clases cálculo areas        
-        Cuadrado cuadrado = new Cuadrado(2);
-        cuadrado.area();
-        System.out.println("Área del cuadrado de lado 2: " + 
-                cuadrado.getareaCuadrado());
+              
+        Menu menu1 = new Menu ();
+        menu1.me();
         
-        Circulo circulo = new Circulo(90);
-        circulo.area();
-        System.out.println("Área del círculo de radio 90: " + 
-                circulo.getAreaRadio());
         
-        Rectangulo rectangulo = new Rectangulo(70, 2);
-        rectangulo.area();
-        System.out.println("Área del rectángulo de base 70 y altura 2: " + 
-                rectangulo.getAreaRectangulo());
-
+        //probar clases cálculo areas   
+        
+        /*
+        
+             
         Triangulo triangulo = new Triangulo(6, 6);
         triangulo.area();
         System.out.println("Área del triángulo de base 6 y altura 6: " + 
                 triangulo.getareaTriangulo());   
+                */
+                
     }
     
 }

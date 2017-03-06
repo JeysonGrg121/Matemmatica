@@ -10,25 +10,28 @@ package matematca;
  * @author Carlos
  */
 public class Circulo {
-    private double radio;
-    private double areaRadio;
-    private static final double pi = 3.1416;
+    public double radio;
+    public double areaRadio;
+    public double DiametroRadio;
+    public double diametro;
+    public static final double pi = 3.1416;
     
     public Circulo(double radio){
         this.radio = radio;
     }
-    public double getRadio(){
-        return radio;
-    }
-
-    public void setRadio(double radio){
-        this.radio = radio;
-    }
-
+    
     public double getAreaRadio(){
         return areaRadio;
     }
-    public void area() {
+    public void arearadio() {
         areaRadio = pi * radio * radio;
     }    
+    public double getDiametroradio(){
+        return DiametroRadio;
+    }
+    public void diametroradio(){
+        DiametroRadio = 2*radio;
+    }
+    
 }
+
