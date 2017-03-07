@@ -103,34 +103,36 @@ public void menu_cuadrado(){
 public void menu_Rectangulo(){
     int des1=-1;
             System.out.println("Ingrese el valor del Base:");
-            base = entrada.nextDouble();
+            base = entrada.nextDouble();//lee el valor 
             System.out.println("ingrese el valor del Altura ");
-            altura = entrada.nextDouble();
-        while(des1!=0){
-            
+            altura = entrada.nextDouble();//lee el valor
+        //while para que el usuario pueda ingresar las veces que desee
+            while(des1!=0){
+            //
             System.out.println("1. Area");
             System.out.println("2. Perimetro");
             System.out.println("3. salir");
-            des1=entrada.nextInt();
-        switch(des1){
+            des1=entrada.nextInt();//valor en se guarde 
+        //un switch para cada operacion que desee utiliza o salir 
+            switch(des1){
             case 1:
         
-                Rectangulo rectangulo1 = new Rectangulo(base,altura);
+                Rectangulo rectangulo1 = new Rectangulo(base,altura);//llamado de la clase para el retorno de los valores
                 rectangulo1.area();
-                System.out.println("Área del rectángulo : " + 
+                System.out.println("Área del rectángulo : " + //retorna el valor calculado
                 rectangulo1.getAreaRectangulo());
                 break;
             case 2:
-                 Rectangulo rectangulo2 = new Rectangulo(base,altura);
+                 Rectangulo rectangulo2 = new Rectangulo(base,altura);//llamado de la clase para retorno de valores
                 rectangulo2.perimetro();
-                System.out.println("Perimetro del rectángulo : " + 
+                System.out.println("Perimetro del rectángulo : " + //retorna el valor calculado
                 rectangulo2.getPerimetroRectangulo());
                 break;
-            case 3:
+            case 3:// en caso de que desee salir de est menu 
                 des1=0;
                 break;
             default:
-                System.out.println("No esta dentro de las 3 opciones.");
+                System.out.println("No esta dentro de las 3 opciones.");//en caso de nu ingresar un valor valido mostrara por pantalla el error
 }
 
 }

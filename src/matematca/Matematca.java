@@ -7,7 +7,7 @@ package matematca;
 import java.util.*;
 /**
  *
- * @author Carlos
+ * @author Jorge andres duran, Jeyson Duarte,Albert Charry 
  */
 public class Matematca {
 
