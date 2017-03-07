@@ -9,7 +9,7 @@ package matematca;
  *
  * @author Carlos
  */
-public class Triangulo {
+public class Triangulo {//variables
     public double x1;
     public double x2;
     public double x3;
@@ -21,7 +21,7 @@ public class Triangulo {
     
     
 
- public Triangulo(double x1,double x2,double x3,double y1,double y2,double y3){
+ public Triangulo(double x1,double x2,double x3,double y1,double y2,double y3){//asigna a los valores de la clase triangulos los valores ingresados
        
         this.x1=x1;
         this.x2=x2;
@@ -31,27 +31,27 @@ public class Triangulo {
         this.y3=y3;
     }
 
-    public double getareaTriangulo(){
+    public double getareaTriangulo(){//retorna el area ya calculada
         return areaTriangulo;
     }
 
         
-    public void area(){
+    public void area(){//calcula el area con los puntos ingresados
         areaTriangulo = (((x1*y2)+(x2*y3)+(x3*y1))-((x1*y3)+(x3*y2)+(x2*y1)))*aux;
     }  
-    public double getPerimetroTriangulo(){        
+    public double getPerimetroTriangulo(){//retorna el valor del perimetro      
         return perimetroTriangulo;
     }
-    public double getladoa(){
+    public double getladoa(){//retorna el valor del lado a
         return ladoa;
     }
-    public double getladob(){
+    public double getladob(){//retorna el valor del lado b
         return ladob;
     }
-    public double getladoc(){
+    public double getladoc(){//retorna el valor del lado c
         return ladoc;
     }
-    public void perimetrotriangulo(){
+    public void perimetrotriangulo(){//calcula el perimitro y el valor de cada uno de los lados
         double a,b,c,d,e,f;
         double q,w,r,t,y,z; 
         

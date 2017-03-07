@@ -9,25 +9,26 @@ package matematca;
  *
  * @author Carlos
  */
+//Para calculo por ingreso de diametro
 class Circulo_2 {
     public double diametro;
     public double areaDiametro;
     public double Diametroradio;
     public double aux = 0.5;
     public static final double pi = 3.1416;
-    public Circulo_2(double diametro){
+    public Circulo_2(double diametro){//asigna el valor a la variable
         this.diametro = diametro;
     }
-    public double getAreaDiametro(){
+    public double getAreaDiametro(){//retorna valor area
         return areaDiametro;
     }
-    public void areadiametro(){
+    public void areadiametro(){//calcula valor area
         areaDiametro = pi *((diametro*diametro)/4);
     }
-    public double getDiametroRadio(){
+    public double getDiametroRadio(){//retorna valor radio
         return Diametroradio;
     }
-    public void radiodiametro(){
+    public void radiodiametro(){//calcula valo radio
         Diametroradio = aux*diametro;
     }
 }

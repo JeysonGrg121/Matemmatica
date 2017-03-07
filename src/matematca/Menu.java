@@ -35,6 +35,9 @@ public class Menu {
         
         
         while(des!=0){
+            System.out.println("   Bienvenido   ");
+            System.out.println("                ");
+            System.out.println("Digite la opcion a solucionar");
             System.out.println("1. Cuadrado");
             System.out.println("2. Rectangulo");
             System.out.println("3. Circulo");
@@ -43,19 +46,19 @@ public class Menu {
             des=entrada.nextInt();
             switch(des){
                 case 1:
-                    menu_cuadrado();
+                    menu_cuadrado();//clase cuadrado
                     break;
                 case 2:
-                    menu_Rectangulo();
+                    menu_Rectangulo();//clase rectangulo
                     break;
                 case 3: 
-                    menu_circulo();
+                    menu_circulo();//clase circulo
                     break;
                 case 4:
-                    menu_triangulo();
+                    menu_triangulo();//clase triangulo
                     break;
                 case 5:
-                    des = 0;
+                    des = 0;//para opciones que no estan en el menu
                     break;
                 default:
                     System.out.println("No esta dentro de las opciones...");
@@ -66,33 +69,33 @@ public class Menu {
     }
 
 
-public void menu_cuadrado(){
+public void menu_cuadrado(){//menu  para ingresar datos al cuadrado
         int des1=-1;
-            System.out.println("Ingrese uno valor del lado:");
-            lado = entrada.nextDouble();
+            System.out.println("Ingrese uno valor del lado:");//solicita dato
+            lado = entrada.nextDouble();//lee el dato ingresado
         while(des1!=0){
-            
+            //menu interno del cuadrado para hallar area y/o perimetro
             System.out.println("1. Area");
             System.out.println("2. Perimetro");
             System.out.println("3. salir");
-            des1=entrada.nextInt();
+            des1=entrada.nextInt();//lee opcion
         switch(des1){
             case 1:
         
-                Cuadrado cuadrado1 = new Cuadrado(lado);
+                Cuadrado cuadrado1 = new Cuadrado(lado);//hace el llamado de la clase para retornar los valores
                 cuadrado1.area();
                 System.out.println("Área del cuadrado es : " + 
-                cuadrado1.getareaCuadrado());
+                cuadrado1.getareaCuadrado());//retorna el valor del area ya calculado en la clase
                 break;
             case 2:
-                Cuadrado cuadrado2 = new Cuadrado(lado);
+                Cuadrado cuadrado2 = new Cuadrado(lado);//hace el llamado de la clase para retornar los valores
                 cuadrado2.perimetro();
                 System.out.println("Perimetro del cuadrado  es: " +
-                cuadrado2.getperimetroCuadrado());
+                cuadrado2.getperimetroCuadrado());//retorna el valor del area ya calculado en la clase
                 break;
             case 3:
                 des1=0;
-                break;
+                break;//salida del menu interno del cuadrado
             default:
                 System.out.println("No esta dentro de las 3 opciones.");
 }
@@ -137,51 +140,52 @@ public void menu_Rectangulo(){
 
 }
 }
-public void menu_circulo(){
+public void menu_circulo(){//menu  para ingresar datos al circulo
     int des1=-1;
 
     
     while(des1 != 0){
-        System.out.println("Desea Saber las operaciones por:");
+        //menu interno del circulo
+        System.out.println("Desea Saber las operaciones por:");//solicita dato para calcular por radio o diametro (dato que ingresa)
         System.out.println("1. Radio");
         System.out.println("2. Diametro");
         System.out.println("3. Salir");
         des1=entrada.nextInt();
         switch(des1){
             case 1:
-                System.out.println("Ingrese el valor del Radio:");
+                System.out.println("Ingrese el valor del Radio:");//solicita el valor del radio
                 radio = entrada.nextDouble();
-                Circulo circulo1 = new Circulo (radio);
+                Circulo circulo1 = new Circulo (radio);//hace el llamado de la clase para retornar los valores
                 circulo1.arearadio();
                 circulo1.diametroradio();
                 System.out.println("Área del circulo es : " + 
-                circulo1.getAreaRadio());
+                circulo1.getAreaRadio());//retorna el valor del area ya calculado en la clase
                 System.out.println("Diametro del circulo es : " + 
-                circulo1.getDiametroradio());
+                circulo1.getDiametroradio());//retorna el valor del perimetro ya calculado en la clase
                 break;
             case 2:
-                System.out.println("Ingrese el valor del Diametro:");
+                System.out.println("Ingrese el valor del Diametro:");//solicita el valor del diametro
                 diametro = entrada.nextDouble();
-                Circulo_2 circulo2 = new Circulo_2(diametro);
+                Circulo_2 circulo2 = new Circulo_2(diametro);//hace el llamado a la clase circulo 2 para retornar valores
                 circulo2.areadiametro();
                 circulo2.radiodiametro();
                 System.out.println("Área del circulo es : " +
-                circulo2.getAreaDiametro());
+                circulo2.getAreaDiametro());//retorna el valor del area ya calculado en la clase
                 System.out.println("Radio del circulo es : " + 
-                circulo2.getDiametroRadio());
+                circulo2.getDiametroRadio());//retorna el valor del radio ya calculado en la clase
                 break;
             case 3:
-                des1 = 0;
+                des1 = 0;//salida del menu interno del circulo
                 break;
             default:
                 System.out.println("No esta dentro de las 3 opciones.");
 }
 }
 }
-public void menu_triangulo(){
+public void menu_triangulo(){//menu para el triangulo
 
     
-     int des1=-1;
+     int des1=-1;//solicita los seis puntos del triangulo por variable independiente
             System.out.println("ingrese el valor de x1: ");
             x1= entrada.nextDouble();
             System.out.println("ingrese el valor de y1: ");
@@ -195,33 +199,33 @@ public void menu_triangulo(){
             System.out.println("ingrese el valor de y3: ");
             y3= entrada.nextDouble();
         while(des1!=0){
-            
+            //menu para clacular area o perimetro con los datos ingresados
             System.out.println("1. Area");
-            System.out.println("2. Perimetro");
+            System.out.println("2. Perimetro");//la medida de los tres lados va calculada en el perimetro
             System.out.println("3. salir");
             des1=entrada.nextInt();
         switch(des1){
             case 1:
         
-                Triangulo triangulo1 = new Triangulo(x1,x2,x3,y1,y2,y3);
+                Triangulo triangulo1 = new Triangulo(x1,x2,x3,y1,y2,y3);//llama la clase y asigna valores ingresados
                 triangulo1.area();
                 System.out.println("El area del Triangualo es: "+
-                triangulo1.getareaTriangulo());
+                triangulo1.getareaTriangulo());//retorna el valor del area ya calculado para imprimir
                 break;
             case 2:
-                Triangulo triangulo2 = new Triangulo(x1,x2,x3,y1,y2,y3);
+                Triangulo triangulo2 = new Triangulo(x1,x2,x3,y1,y2,y3);//llama la clase y asigna valores ingresados
                 triangulo2.perimetrotriangulo();
                 System.out.println("El perimetro del Triangulo es:"+
-                triangulo2.getPerimetroTriangulo());
+                triangulo2.getPerimetroTriangulo());//retorna el perimetro ya claculado
                 System.out.println("El lado A Del triangulo es:"+
-                triangulo2.getladoa());
+                triangulo2.getladoa());//retorna la medida del lado a-b
                 System.out.println("El lado B Del triangulo es:"+
-                triangulo2.getladob());
+                triangulo2.getladob());//retorna la medida del lado b-c
                 System.out.println("El lado C Del triangulo es:"+
-                triangulo2.getladoc());
+                triangulo2.getladoc());//retorna la medida del lado a-c
                 break;
             case 3: 
-                des1 = 0;
+                des1 = 0;//salida del menu interno del triangulo
                 break;
             default:
                 System.out.println("No esta dentro de las opciones...");

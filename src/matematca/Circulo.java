@@ -9,6 +9,7 @@ package matematca;
  *
  * @author Carlos
  */
+//Para calculo por ingreso de radio
 public class Circulo {
     public double radio;
     public double areaRadio;
@@ -16,20 +17,20 @@ public class Circulo {
     public double diametro;
     public static final double pi = 3.1416;
     
-    public Circulo(double radio){
+    public Circulo(double radio){//asignacion de la variabale
         this.radio = radio;
     }
     
-    public double getAreaRadio(){
+    public double getAreaRadio(){//retorna valor de area
         return areaRadio;
     }
-    public void arearadio() {
+    public void arearadio() {//calcula valor area
         areaRadio = pi * radio * radio;
     }    
-    public double getDiametroradio(){
+    public double getDiametroradio(){//retorna valor diametro
         return DiametroRadio;
     }
-    public void diametroradio(){
+    public void diametroradio(){//calcula valor diametro
         DiametroRadio = 2*radio;
     }
     
